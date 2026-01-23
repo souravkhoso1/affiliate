@@ -1,0 +1,2 @@
+# affiliate
+An affiliate website
