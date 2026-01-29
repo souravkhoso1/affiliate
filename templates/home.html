@@ -4,5 +4,16 @@
 
 <h2>Today's Hot deals</h2>
 <hr/>
-
+<div class="row">
+    {% for product in todays_deal_products %}
+    <div class="col-md-3 column productbox">
+        <img src="{{ product.primary_photo_link }}" class="img-fluid">
+        <div class="producttitle">{{ product.name }}</div>
+        <div class="productprice">
+            <div class="pull-right"><a href="{{ product.amazon_affiliate_link }}" class="btn btn-danger btn-sm" role="button" target="_blank">BUY</a></div>
+            <div class="pricetext">${{ product.current_price }} <span style="float:right;color:red">{{ product.discount_percentage }}% off</span></div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
